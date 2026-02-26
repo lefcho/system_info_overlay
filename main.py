@@ -46,6 +46,8 @@ class Overlay(QWidget):
         s.connect(("8.8.8.8", 80))
         ip = s.getsockname()[0]
         s.close()
+        # if you want to get the real ip use:
+        # ip = socket.gethostbyname(socket.gethostname())
         return ip
     
     def make_click_through(self):
